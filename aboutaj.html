@@ -16,7 +16,7 @@
 <body class="white">
     <nav>
         <ul class="horizontal-nav about-nav">
-                <li> <button class="hidden" id="hamburger" onclick="myFunction()"><i class="fas fa-bars fa-2x"></i></button></li>
+                <li> <button class="hidden" id="hamburger"><i class="fas fa-bars fa-2x"></i></button></li>
                 <ul class="exposed horizontal">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutaj.html">About AJ</a></li>
@@ -268,8 +268,8 @@
             <article class="wedding about-item">
                 <h3><i class="fas fa-hand-holding-heart"></i> Time to show your love</h3>
                 <div class="about-item">
-                <h4 class="gray">Double click on AJ's wedding photo to <i class="fas fa-heart"></i> it</h4>
-                <p>You liked it <span id="num-of-likes">0</span> times</p>
+                    <h4 class="gray">Double click on AJ's wedding photo to <i class="fas fa-heart"></i> it</h4>
+                    <p>You liked it <span id="num-of-likes">0</span> times  <span class="wedding-msg gray"></span></p>
                 </div>
                 <div id="wedding"> <i class="fas fa-heart"></i></div>
             </article>
@@ -349,8 +349,33 @@
             numOfLikes.style.fontWeight = "bold"
             numOfLikes.innerHTML = ++timesLiked
 
+            updateMsg()
             setTimeout( () => heart.remove(), 1000)
         }
+
+        const message = document.querySelector(".wedding-msg")
+
+        function updateMsg(){
+            if ( (timesLiked >= 5) && (timesLiked < 10) ){
+                message.innerHTML = "&asymp; AJ affection"
+            } else {
+                if ( (timesLiked >= 10) && (timesLiked < 20)  ){
+                    message.innerHTML = "&asymp; AJ enthusiasm"
+                } else {
+                    if ( (timesLiked >= 20) && (timesLiked < 50)  ){
+                        message.innerHTML = "&asymp; AJ admiration"
+                    } else {
+                        if ( (timesLiked >= 50) && (timesLiked < 100)  ){
+                            message.innerHTML = "&asymp; AJ obsession and love"
+                        } else {
+                            if ( timesLiked >= 100 ){
+                                message.innerHTML = "&asymp; AJ fanaticism"
+                            }
+                        }
+                    }
+                }
+            }
+        }  
     </script>
     <script src="js/script.js"></script>
 </body>

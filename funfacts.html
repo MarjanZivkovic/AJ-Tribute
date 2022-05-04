@@ -16,7 +16,7 @@
 </head>
 <body onload="displayRandom()">
     <nav class="side-nav" id="fun-nav">
-            <button id="hamburger" class="hidden" onclick="myFunction()"><i class="fas fa-bars fa-2x"></i></button>
+            <button id="hamburger" class="hidden fan-burger"><i class="fas fa-bars fa-2x"></i></button>
             <ul class="exposed" >
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutaj.html">About AJ</a></li>
@@ -34,6 +34,7 @@
     </nav>
     <main class="funfacts-container">
         <div class="funfacts">
+            <button class="fun-btn" onclick="displayRandom()">Fun Fact Generator</button>
             <div class="funfact fact">
                 <h3>Listen and Answer</h3>
                 <p>Mini-story lessons were originally called "Listen and Answer Story Lessons". Since they proved to be AJ's most effective lessons they were given a more effective name. </p>
@@ -72,6 +73,12 @@
                <p>AJ is a movie buff. Not only does he like watching movies but he attempted to make some. He attended a photography and filmmaking seminar. He also wrote a script for a movie and planned to direct that movie but didn't follow through.</p>
                <button class="fun-small-btn">See master in action</button>
                <img class="fun-img hidden" src="img/filming.jpg" alt="Filmmaker">
+            </div>
+            <div class="funfact">
+                <h3>Cool father</h3>
+               <p>All parents know that walking and carrying a baby for a while can be tough. But what if there are two babies?</p>
+               <button class="fun-small-btn">No problem for AJ!</button>
+               <img class="fun-img hidden" src="img/babies.jpg" alt="Carrying babies">
             </div>
             <div class="funfact">
                 <h3>Origin of AJ's accent</h3>
@@ -130,6 +137,12 @@
                 <button class="fun-small-btn">The answer</button>
                 <p class="fun-img hidden"> Lack of sleep because of Joe snoring</p> 
             </div>
+            <div class="funfact">
+                <h3>The American school year</h3>
+                <p>Do you know what's the one thing AJ did like about the traditional school system?</p>
+                <button class="fun-small-btn">The answer</button>
+                <p class="fun-img hidden"> The school year calendar! <br> Several breaks built-in, including a "long" (2 month) summer break</p> 
+            </div>
             <div class="funfact fun-only">
                 <h3>Body language</h3>
                <p>In his public events, AJ is well-known for his energy, loud voice, strong body language, and <button class="fun-small-btn">facial expressions</button></p>
@@ -139,6 +152,16 @@
                 <h3>Football</h3>
                <p>When it comes to football AJ prefers American. He's not much of a "soccer" fan, but he supports both American and Japanese national teams. Also, he sometimes uses famous players, like Messi, in some of the mini-stories. He's also <button class="fun-small-btn"> skillful with the ball</button></p>
                <img class="fun-img hidden" src="img/soccer.jpg" alt="Soccer">
+            </div>
+            <div class="funfact fact">
+                <h3>Photography</h3>
+               <p>One of AJ's big interests, and who knows, maybe possible occupation. <button class="fun-small-btn">See master in action</button></p>
+               <img class="fun-img hidden" src="img/photographer.jpg" alt="Photography">
+            </div>
+            <div class="funfact">
+                <h3>Electrifying</h3>
+               <p>They say a picture is worth a thousand words. I don't have words to describe the atmosphere at AJ's seminars. Therefore <button class="fun-small-btn">see the picture </button></p>
+               <img class="fun-img hidden" src="img/seminar.jpg" alt="seminar">
             </div>
             <div class="funfact fact">
                 <h3>No failure</h3>
@@ -182,11 +205,15 @@
                <p>Ask yourself why next time you think about watching porn. It's just another way of controlling, and it's very powerful and destructive.</p>
                <p>Luckily AJ recently added this episode for YouTube supporting members. One more reason to support the Show on YouTube. </p>
             </div>
-            <button class="fun-btn" onclick="displayRandom()">Fun Fact Generator</button>
+            
         </div>
     </main>
     <aside class="fun-icons">
         <i class="fas fa-user-astronaut"></i><i class="fas fa-hat-wizard"></i><i class="fas fa-star"></i><i class="fas fa-puzzle-piece"></i><i class="fas fa-gamepad"></i><i class="fas fa-robot"></i><i class="fas fa-user-astronaut"></i><i class="fas fa-snowman"></i><i class="fas fa-star"></i><i class="fas fa-puzzle-piece"></i><i class="fas fa-hat-wizard"></i><i class="fas fa-robot"></i><i class="fas fa-gifts"></i><i class="fas fa-gamepad"></i><i class="fas fa-user-astronaut"></i><i class="fas fa-shapes"></i><i class="fas fa-puzzle-piece"></i><i class="fas fa-robot"></i><i class="fas fa-compass-drafting"></i><i class="fas fa-icons"></i><i class="fas fa-gamepad"></i><i class="fas fa-star"></i><i class="fas fa-hat-wizard"></i><i class="fas fa-user-astronaut"></i><i class="fas fa-robot"></i><i class="fas fa-wand-sparkles"></i><i class="fas fa-puzzle-piece"></i>
+    </aside>
+    <aside>
+        <span class="its-random">RANDOM FACTS</span>
+        <span class="keep-clicking">KEEP CLICKING!</span>
     </aside>
     <div>
         <a class="gototop" href="#"> <i class="fas fa-chevron-up fa-2x"></i> </a>
