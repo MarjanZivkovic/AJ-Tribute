@@ -1,7 +1,10 @@
 //hamburger button
 const sideMenu = document.querySelector(".exposed")
+const hamburgerBtn =  document.getElementById("hamburger")
 
-function myFunction(){
+hamburgerBtn.addEventListener("click", () => showNavigation() )
+
+function showNavigation(){
     if (sideMenu.style.display === "none") {
          sideMenu.style.display = "block"
     } else {
