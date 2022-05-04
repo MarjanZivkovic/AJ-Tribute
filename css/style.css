@@ -23,7 +23,6 @@ img{
     width: 100%;
     height: auto;
 }
-
 h1, h2, h3{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     padding: 1em 0;
@@ -41,7 +40,9 @@ ul{
 blockquote{
     font-style: italic;
 }
-
+*:focus{
+    outline: none;
+}
 .dotted{
     background-image: url(../img/drops.jpg);
     background-attachment: fixed;
@@ -368,8 +369,6 @@ blockquote{
 /*auto text*/
 .commit{
     height: 40vh;
-    background-color: #333;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,10 +378,14 @@ blockquote{
 }
 
 /*footer*/
+.top-footer, .main-footer, .bottom-footer{
+    position: relative;
+    z-index: 40;
+}
 .top-footer{
     display: flex;
     justify-content: space-evenly;
-    background-color: #999;
+    background-color: rgba(153, 153, 153, 0.8);
     padding: 2em;
 }
 .top-footer img{
@@ -691,21 +694,20 @@ blockquote{
     z-index: 50;
 }
 #hamburger{
-    background-color: #e6e6e6;
+    background-color: transparent;
     border: 0;
-    padding: 10px;
+    padding: 0.8em;
     cursor: pointer;
+    font-size: 0.8em;
 }
 #hamburger:hover{
     background-color: #fff;
     color: #333;
-    border-radius: 10px;
 }
 .side-nav ul li a{
     display: inline-block;
     padding: 5px 10px;
     color: #333;
-    border-radius: 10px;
     line-height: 1.7em;
 }
 .side-nav ul li a:hover{
@@ -845,19 +847,20 @@ blockquote{
 .small{
     font-size: .7em;
 }
-#chess{
+#chess-board{
+    padding: 3em;
+    margin: 2em auto;
+    text-align: left;
     background-image: url(../img/board.jpg);
     background-position: center;
     background-size: cover;
     color: #333;
 }
-#chess-board{
-    width: 70%;
+#chess-board > div{
+    width: 80%;
     background-color: #e6e6e6;
-    opacity: 1;
-    padding: 3em;
-    margin: 2em auto;
-    text-align: left;
+    margin: 1em auto;
+    padding-bottom: 2em;
 }
 #chess-board h2{
     margin: 3em 0;
@@ -956,13 +959,16 @@ blockquote{
         min-height: 120vh;
     }
     #castle, #showcase{
-        height: 50vh;
+        max-height: 1320px;
     }
     #about, .box{
         min-height: 20vh;
     }
     .commit{
         height: 20vh;
+    }
+    .panel{
+        max-height: 1130px;
     }
 }
 @media (max-width: 1280px) {
@@ -994,6 +1000,9 @@ blockquote{
     html{
         font-size: 14.4px;
     }
+    h1{
+        line-height: 1.6em;
+    }
     /* 7rules*/
     .rules-container{
         max-width: 70%;
@@ -1019,6 +1028,9 @@ blockquote{
         min-width: 250px;
     }
     /*home*/
+    #showcase{
+        height: 130vh;
+    }
     #about .btn{
         width: 40%;
         margin: 12em 0 4em 2em;
@@ -1049,20 +1061,53 @@ blockquote{
         width: 20%;
     }
 }
+@media (max-width: 900px){
+    /*hamburger menu ALL PAGES*/
+    .exposed{
+        display: none;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .hidden{
+        display: block;
+    }
+    .rule.hidden{
+        display: none;
+    }
+    .divider{
+        display: none;
+    }
+    .horizontal-nav{
+        text-align: center;
+        color: #333;
+    }
+    .about-nav, .podcast-nav, .ee-nav, #fun-nav{
+        max-width: max-content;
+    }
+    .podcast-nav ul li a, .side-nav ul li a, .about-nav ul li a, .ee-nav ul li a{
+        font-weight: bold;
+        line-height: 1.1em;
+        padding: 5px 4em;
+    }
+    #fun-nav{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #hamburger.fan-burger{
+        background-color: #5cdb95
+    }
+}
 
 @media (max-width : 767px) {
     html{
         font-size: 12px;
     }
-    /*hamburger menu*/
-    .exposed{
-        display: none;
-        background-color: #fff;
-        opacity: 0.7;
-        border-radius: 5px;
+    a{
+        text-decoration: underline;
     }
-    .hidden{
-        display: block;
+    .top-footer a, .main-footer a, a.btn, .testimonial-btn, #join, .side-nav ul li a, .horizontal-nav ul li a, .top-nav ul li a {
+        text-decoration: none;
+    }
+    .main-footer .follow-people a:first-child{
+        margin-bottom: 10px;
     }
     /* 7 rules*/
     .rules-container{
@@ -1078,9 +1123,6 @@ blockquote{
     /*testimonials*/
     .testimonial-container .rule{
         font-size: 1.1em;
-    }
-    .rule.hidden{
-        display: none;
     }
     .big-comments{
         font-size: 80px;
@@ -1259,15 +1301,21 @@ blockquote{
     }
     /*courses*/
     #icons{
-        left: -0.5em;
+        left: -0.4em;
         top: 5em;
         max-width: 3.8em;
         overflow: hidden;
         text-align: center;
     }
     #icons i{
-      padding: 10px 5px;
+      padding: 10px 2px;
     }
+    #icons i:hover{
+        margin: 0;
+    }
+    #icons .selected{
+        border: 1px solid #fff;
+    }    
     .course > *{
         max-width: 80%;
         margin-left: 35px;
