@@ -34,7 +34,7 @@
     </nav>
     <main class="funfacts-container">
         <div class="funfacts">
-            <button class="fun-btn" onclick="displayRandom()">Fun Fact Generator</button>
+            <button class="fun-btn">Fun Fact Generator</button>
             <div class="funfact fact">
                 <h3>Listen and Answer</h3>
                 <p>Mini-story lessons were originally called "Listen and Answer Story Lessons". Since they proved to be AJ's most effective lessons they were given a more effective name. </p>
@@ -171,7 +171,7 @@
             <div class="funfact">
                 <h3>Something wrong and funny</h3>
                <p>With so many episodes done, we can argue the whole day what is the funniest EE Show. In my opinion, gold goes to "Something Wrong in Japan". It is about AJ's experience as an assistant teacher in Japan. <br> The way he describes an English class is hilarious. He said the word "Japanese" more than 80 times in the first ten minutes of the podcast.</p>
-               <p>The class he described is not funny at all. Unfortunatelly, English is still taught this way in many places.</p>
+               <p>The class he was describing is not funny at all. Unfortunatelly, English is still taught this way in many places.</p>
                <p>Funny or sad, listen <a href="https://castbox.fm/episode/Something-Wrong-in-Japan-id3178854-id294995026?country=us" target="_blank">HERE</a>  and judge yourself!</p>
             </div>
             <div class="funfact">
@@ -256,7 +256,7 @@
     <script src="js/script.js"></script>
     <script>
         const funFacts = document.querySelectorAll(".funfact")
-        const funBtn = document.getElementsByClassName("fun-btn")
+        const funBtn = document.querySelector(".fun-btn")
 
         function displayRandom(){
             let randomFact = funFacts[Math.round( Math.random() * funFacts.length )];
@@ -268,6 +268,10 @@
                 fact.style.display = "none"
             } )
         }
+
+        funBtn.addEventListener("click", () => { 
+            displayRandom() 
+        })
 
         const smallBtns = document.querySelectorAll(".fun-small-btn")
         const funImage = document.querySelectorAll(".fun-img")

@@ -532,17 +532,26 @@
         const eeNav = document.querySelector(".ee-nav")
         const eeBook = document.querySelector("#ee-book")
         const bookBox = eeBook.getBoundingClientRect().top
+        const changeLine = +(bookBox - 30)
 
         window.addEventListener("scroll", () => { 
             changeNav()
+            stopThunder()
         })
 
         function changeNav(){
-            if( window.scrollY > bookBox ){
+            if( window.scrollY > changeLine){
                 eeNav.classList.add("book-nav")
             } else {
                 eeNav.classList.remove("book-nav")
             }
+        }
+
+        function stopThunder(){
+            if( window.scrollY > changeLine){
+                thunder.pause()
+                thunder.srcObject = null
+            }    
         }
     </script>
 </body>

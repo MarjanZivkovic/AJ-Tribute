@@ -85,22 +85,23 @@
             <i class="fas fa-chess-queen  big-rook"></i>
             <h2>ACTIVE COURSES</h2>
                <div class="box">
-                    <div class="box-item"><a href="courses.html#original"><i class="far fa-registered fa-6x"></i></a>
+                    <div class="box-item"><a href="https://effortlessenglishclub.com/original-course" target="_blank"><i class="far fa-registered fa-6x"></i></a>
                         <div class="cousres-title">ORIGINAL COURSE</div>
                     </div>
-                    <div class="box-item"><a href="courses.html#power"><i class="fas fa-power-off fa-6x"></i></a>
+                    <div class="box-item"><a href="https://effortlessenglishclub.com/" target="_blank"><i class="fas fa-power-off fa-6x"></i></a>
                         <div class="cousres-title">POWER ENGLISH COURSE</div>
                     </div>
-                    <div class="box-item"><a href="courses.html#vip"><i class="fas fa-award fa-6x"></i></a>
+                    <div class="box-item"><a href="https://effortlessenglishclub.com/vip-membership" target="_blank"><i class="fas fa-award fa-6x"></i></a>
                         <div class="cousres-title">VIP PROGRAM</div>
                     </div>
-                    <div class="box-item"><a href="courses.html#business"><i class="fas fa-business-time fa-6x"></i></a>
+                    <div class="box-item"><a href="https://effortlessenglishclub.com/businessenglish" target="_blank"><i class="fas fa-business-time fa-6x"></i></a>
                         <div class="cousres-title">BUSINESS ENGLISH CONVERSATIONS COURSE</div>
                     </div>
-                    <div class="box-item"><a href="courses.html#pronunciation"><i class="fas fa-volume-up fa-6x"></i></a>
+                    <div class="box-item"><a href="https://effortlessenglishclub.com/pronunciation-course" target="_blank"><i class="fas fa-volume-up fa-6x"></i></a>
                         <div class="cousres-title">PRONUNCIATION COURSE</div>
                     </div>
                 </div> 
+                <div id="all-courses" class="quote"><a href="courses.html">See&nbsp;all&nbsp;></a></div> 
         </div>    
     </section>
     <section class="quote dark">
@@ -111,7 +112,7 @@
             <h1>"Becoming a VIP member was one of the best decisions in my life."</h1>
             <div><p>Average rating:</p>
                 <span class="red">5/5 Excellent ★★★★★</span>
-                <p>6 customers have written a review. <a href="testimonials.html"> See&nbsp;all&nbsp;></a></p> 
+                <p>13 customers have written a review. <a href="testimonials.html"> See&nbsp;all&nbsp;></a></p> 
             </div>    
         </header>
         <div class="home-testimonials">
@@ -124,12 +125,12 @@
                 <p><a href="testimonials.html#carole">Read&nbsp;more&nbsp;>></a></p>
             </div>         
             <div class="home-testimonial">
-                <img src="img/carole.JPEG" alt="carole">
-                <p>Carole</p>
-                <p>France</p>
+                <img src="img/fernanda.jpg" alt="fernanda">
+                <p><strong>Fernanda</strong></p>
+                <p><strong>Brazil</strong></p>
                 <span class="red">★★★★★</span>  
-                <p>Although he certainly doesn't know it, AJ was always of great support in times of doubts and difficulties with his energetic attitude and tone. Each lesson is a gem, giving you the tools to achieve professional and personal life improvement and to become a better person.</p>
-                <p><a href="testimonials.html#carole">Read&nbsp;more&nbsp;>></a></p>
+                <p>There were a lot of things that I want to say about AJ and Effortless English, but I can remark some. One of them is cutting limiting beliefs. For exemple, I used to think that adults can't learn English effectively, and it's not true. It was a limiting belief that I don't have anymore...</p>
+                <p><a href="testimonials.html#fernanda">Read&nbsp;more&nbsp;>></a></p>
             </div>
             <div class="home-testimonial">
                 <img src="img/slavica.jpg" alt="slavica">
@@ -193,8 +194,26 @@
             <small>zivkovicmarjan@yahoo.com</small>
         </div>
     </footer>
-    <script src="js/script.js"></script>
     <script>
+        // go to top btn
+        const goToTop = document.querySelectorAll(".gototop")
+
+        window.addEventListener("scroll", () =>{
+            toTopHandler()
+        })
+
+        function toTopHandler(){
+            if(( document.body.scrollTop > 500) || (document.documentElement.scrollTop > 500)){
+                goToTop.forEach((goTo) =>{
+                    goTo.style.display = "block"
+                })
+            } else {
+                goToTop.forEach((goTo) =>{
+                    goTo.style.display = "none"
+                })
+            } 
+        }
+        //commit don't quit
         const autoTextEl = document.querySelector(".auto-text")
         let indexText = 1
         const autoText = autoTextEl.innerHTML
