@@ -559,7 +559,7 @@
     font-size: 1.8rem;
     word-wrap: break-word;
     width: 50%;
-    margin-bottom: 4rem;
+    margin: 1rem 0 4rem;
     padding: 1rem;
     border: 5px solid #05386b;
     border-radius: 20px;
@@ -1378,6 +1378,12 @@
     .funfact::before{
         top: -40px;
         left: -80px;
+    }
+    .keep-clicking{
+        letter-spacing: 0;
+        word-spacing: 0;
+        font-size: 0.7em;
+        top: 10%;
     }
     /*podcast*/
     .podcast-main{
