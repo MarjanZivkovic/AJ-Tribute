@@ -57,7 +57,7 @@
                 </ul> 
             </div>
             <div class="funfact">
-                <h3>English and sex</h3>
+                <h3>English and the city</h3>
                <p>While he was still teaching English at school, at one of his last jobs, AJ used one episode of "Sex and the city" in one of his classes. Not surprisingly, the students loved his class.</p>
             </div>
             <div class="funfact fact">
@@ -221,7 +221,7 @@
     <footer>
         <div class="top-footer fun-footer">
             <div>
-                <img src="img/logo_white.svg">
+                <img src="img/logo_white.svg" alt="logo">
             </div>
             <ul>
                     <li><a href="index.html">Home</a></li>
@@ -259,7 +259,7 @@
         const funBtn = document.querySelector(".fun-btn")
 
         function displayRandom(){
-            let randomFact = funFacts[Math.round( Math.random() * funFacts.length )];
+            let randomFact = funFacts[Math.floor( Math.random() * funFacts.length )]
             displayNone()
             randomFact.style.display = "block"
         }

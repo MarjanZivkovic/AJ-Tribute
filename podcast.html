@@ -17,10 +17,9 @@
 <body class="dotted">
     <header><div id="podcast-header" class="main-wrapper"></div></header>
 
-    <nav>
-        <ul class="horizontal-nav podcast-nav scrolled">
-                <li> <button class="hidden" id="hamburger"><i class="fas fa-bars fa-2x"></i></button></li>
-                <ul class="exposed horizontal">
+    <nav class="horizontal-nav podcast-nav scrolled">
+            <button class="hidden" id="hamburger"><i class="fas fa-bars fa-2x"></i></button>
+            <ul class="exposed horizontal">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutaj.html">About AJ</a></li>
                     <li><a href="aboutee.html">About EE</a></li>
@@ -33,10 +32,8 @@
                     <li><a href="aboutee.html#ee-book">Book</a></li>
                     <li><a href="code.html">Code</a></li>
                     <li><a href="funfacts.html">Fun Facts</a></li>
-                </ul>
-        </ul>
-    </nav>
-    
+            </ul>
+    </nav>    
     <div class="podcast-main">
         <div class="dark quote">
             <blockquote>Welcome to the Effortless English show with the world's number one English teacher - AJ HOGE, where AJ's more than 40 million students worldwide finally learn English, once and for all, without the boring textbooks, classrooms, and grammar drills. Here's AJ with the quick piece to help you learn to speak fluent English effortlessly.</blockquote>
@@ -102,22 +99,22 @@
                 <h2>Episodes by years:</h2>
                 <div id="podcast-year">
                    <ul> 
-                        <li>2006: <span class="bar"><span class="bar6 noshow">52</span></li>
-                        <li>2007: <span class="bar"><span class="bar7 noshow">50</span></li>
-                        <li>2008: <span class="bar"><span class="bar8 noshow">53</span></li>
-                        <li>2009: <span class="bar"><span class="bar9 noshow">31</span></li>
-                        <li>2010: <span class="bar"><span class="bar10 noshow">1</span></li> 
-                        <li>2011: <span class="bar"><span class="bar11 noshow">11</span></li>
-                        <li>2012: <span class="bar"><span class="bar12 noshow">9</span></li>
-                        <li>2013: <span class="bar"><span class="bar13 noshow">11</span></li>
-                        <li>2014: <span class="bar"><span class="bar14 noshow">28</span></li>
-                        <li>2015: <span class="bar"><span class="bar15 noshow">10</span></li>
-                        <li>2016: <span class="bar"><span class="bar16 noshow">22</span></li>
-                        <li>2017: <span class="bar"><span class="bar17 noshow">38</span></li>
-                        <li>2018: <span class="bar"><span class="bar18 noshow">181</span></li>
-                        <li>2019: <span class="bar"><span class="bar19 noshow">213</span></li>
-                        <li>2020: <span class="bar"><span class="bar20 noshow">133</span></li>
-                        <li>2021: <span class="bar"><span class="bar21 noshow">16</span></li>
+                        <li>2006: <span class="bar"><span class="bar6 noshow">52</span></span></li>
+                        <li>2007: <span class="bar"><span class="bar7 noshow">50</span></span></li>
+                        <li>2008: <span class="bar"><span class="bar8 noshow">53</span></span></li>
+                        <li>2009: <span class="bar"><span class="bar9 noshow">31</span></span></li>
+                        <li>2010: <span class="bar"><span class="bar10 noshow">1</span></span></li> 
+                        <li>2011: <span class="bar"><span class="bar11 noshow">11</span></span></li>
+                        <li>2012: <span class="bar"><span class="bar12 noshow">9</span></span></li>
+                        <li>2013: <span class="bar"><span class="bar13 noshow">11</span></span></li>
+                        <li>2014: <span class="bar"><span class="bar14 noshow">28</span></span></li>
+                        <li>2015: <span class="bar"><span class="bar15 noshow">10</span></span></li>
+                        <li>2016: <span class="bar"><span class="bar16 noshow">22</span></span></li>
+                        <li>2017: <span class="bar"><span class="bar17 noshow">38</span></span></li>
+                        <li>2018: <span class="bar"><span class="bar18 noshow">181</span></span></li>
+                        <li>2019: <span class="bar"><span class="bar19 noshow">213</span></span></li>
+                        <li>2020: <span class="bar"><span class="bar20 noshow">133</span></span></li>
+                        <li>2021: <span class="bar"><span class="bar21 noshow">16</span></span></li>
                     </ul>       
                 </div>
             </div>
@@ -486,7 +483,7 @@
                             <i class="bgn-icon snd-icon fas fa-video"></i>
                         </div>
                         <div class="book-right">
-                            <h4><i class="fas fa-film fa-2x"></i></h4>
+                            <p><i class="fas fa-film fa-2x"></i></p>
                             <ul>
                                 <li title="Brothers, Sisters, Whatever"><strong>Directed by:</strong> The Wachowskis</li>
                                 <li><strong>Genre:</strong> Sci-Fi, Action</li>
@@ -505,7 +502,7 @@
                             <i class="bgn-icon snd-icon fas fa-video"></i>
                         </div>
                         <div class="book-right">
-                            <h4><i class="fas fa-film fa-2x"></i></h4>
+                            <p><i class="fas fa-film fa-2x"></i></p>
                             <ul>
                                 <li><strong>Directed by:</strong> Cameron Crowe</li>
                                 <li><strong>Genre:</strong> Romantic Comedy-Drama </li>
@@ -645,12 +642,15 @@
                 <p class="book"><sup>*</sup> Special accent was on converting temperature from degrees Fahrenheit to Celsius and vice versa. If you still struggle with that, here's a little help. Have fun! <br> <br>  <label for="degreeC">Enter temperature in degrees Celsius</label> <input type="number" id="degreeC" max="60" min="-90" placeholder="from -90 to +60 C"> <br> <span id="dergeeF"></span>
                 </p>
                 <p class="book">Above all the main charm of Walk n Talks is their authenticity. You can almost feel the atmosphere of streets, parks, and coffee shops in Osaka. AJ often ran into people who greeted him, said hi to passengers, and once even helped a woman who collapsed on the street. He promoted his city in the best possible way, describing its landmarks, history, and people,  making us want to visit it. As he jokingly said many times, I hope he'll get sponsorship from Japan Tourism Agency. It'd be well deserved.</p>
-                <ul class="book"> Alternative names:
-                        <li>Coffee n Talk</li>
-                        <li>Relax n Talk</li>
-                        <li>Casual Chat</li>
-                        <li>Chat</li>
-                </ul>
+                <div class="book">
+                    Alternative names:
+                    <ul> 
+                            <li>Coffee n Talk</li>
+                            <li>Relax n Talk</li>
+                            <li>Casual Chat</li>
+                            <li>Chat</li>
+                    </ul>
+                </div>
                 <p class="book">
                     <img src="img/walkntalk.jpg" alt="Walk and Talk recording">
                     <br> Walk n Talk recording
@@ -672,7 +672,7 @@
     <footer class="podcast-footer" >
         <div class="top-footer">
             <div>
-                <img src="img/logo_white.svg">
+                <img src="img/logo_white.svg" alt="logo">
             </div>
             <ul>
                     <li><a href="index.html">Home</a></li>
@@ -704,24 +704,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <script>
-        const podcastNav = document.querySelector(".podcast-nav")
-        const podcastHeader = document.getElementById("podcast-header")
-
-        window.addEventListener("scroll", () =>{
-            changeNav()
-        })
-        window.addEventListener("scroll", () =>{
-            toTopHandler()
-        })
-
-        function changeNav(){
-            if( window.scrollY > podcastHeader.offsetHeight ){
-                podcastNav.classList.remove("scrolled")
-            } else {
-                podcastNav.classList.add("scrolled")
-            }
-        }
-    </script>
+    <script src="js/script1.js"></script>
 </body>
 </html>

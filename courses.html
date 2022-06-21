@@ -79,7 +79,7 @@
 
         <div data-course="2" id="power" class="dark course" >
             <h1><i class="fas fa-power-off fa-5x"></i> <br><br> POWER ENGLISH COURSE</h1>
-            <P>Power English course is AJ's best-seller course. The course is recorded <span class="dark-stand-out">in a professional studio</span>  and has much better sound quality. On the day it was launched, effortlessenglishclub.com had so many visits that the website crashed. Therefore AJ was forced to get a more reliable host.  </P>
+            <p>Power English course is AJ's best-seller course. The course is recorded <span class="dark-stand-out">in a professional studio</span>  and has much better sound quality. On the day it was launched, effortlessenglishclub.com had so many visits that the website crashed. Therefore AJ was forced to get a more reliable host.</p>
             <p>This course will not only teach you to speak fluently. The main focus is on the <span class="dark-stand-out">psychology of success</span>. It'll teach you powerful NLP techniques for living a better life. Power English introduces <span class="dark-stand-out">some great books</span>  such as Unlimited Power by Tony Robbins, Man's Search for Meaning by Viktor Frankl, 4-Hour Workweek by Tim Ferriss, Slow Burn by Stu Mittleman, Kaizen Way by Robert Maurer, and many more.</p>
             <div class="content-level">
                 <div class="level-dark">
@@ -225,15 +225,16 @@
             <div id="chess-board">
                 <div>
                     <h2>Checkmate English!</h2>
-                    <p><i class="fas fa-chess-knight fa-2x"></i> ----- Original</p>
-                    <p><i class="fas fa-chess-knight fa-2x"></i> <i class="fas fa-chess-pawn fa-2x"></i> ----- Original + Pronunciation</p>
-                    <p><i class="fas fa-chess-bishop fa-2x"></i> ----- Power</p>
-                    <p><i class="fas fa-chess-bishop fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- Power + Pronunciation</p>
-                    <p><i class="fas fa-chess-rook fa-2x"></i> ----- BEC</p>
-                    <p><i class="fas fa-chess-rook fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- BEC + Pronunciation</p>
-                    <p><i class="fas fa-chess-queen fa-2x"></i> ----- VIP</p>
-                    <p><i class="fas fa-chess-queen fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- VIP + Pronunciation</p>
-                    <p><i class="fas fa-chess-king fa-2x"></i> ----- VIP + BEC + Pronunciation</p>
+                    <p><button class="chess-clock"><img src="img/chess-clock.png" alt="clock"></button></p>
+                    <p class="chess-item"><i class="fas fa-chess-knight fa-2x"></i> ----- Original</p>
+                    <p class="chess-item" id="ci-2"><i class="fas fa-chess-knight fa-2x"></i> <i class="fas fa-chess-pawn fa-2x"></i> ----- Original + Pronunciation</p>
+                    <p class="chess-item" id="ci-3"><i class="fas fa-chess-bishop fa-2x"></i> ----- Power</p>
+                    <p class="chess-item" id="ci-4"><i class="fas fa-chess-bishop fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- Power + Pronunciation</p>
+                    <p class="chess-item" id="ci-5"><i class="fas fa-chess-rook fa-2x"></i> ----- BEC</p>
+                    <p class="chess-item" id="ci-6"><i class="fas fa-chess-rook fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- BEC + Pronunciation</p>
+                    <p class="chess-item" id="ci-7"><i class="fas fa-chess-queen fa-2x"></i> ----- VIP</p>
+                    <p class="chess-item" id="ci-8"><i class="fas fa-chess-queen fa-2x"></i><i class="fas fa-chess-pawn fa-2x"></i> ----- VIP + Pronunciation</p>
+                    <p class="chess-item" id="ci-9"><i class="fas fa-chess-king fa-2x"></i> ----- VIP + BEC + Pronunciation</p>
                 </div>
             </div>
         </div>
@@ -244,7 +245,7 @@
     <footer >
         <div class="top-footer">
             <div>
-                <img src="img/logo.svg">
+                <img src="img/logo.svg" alt="logo">
             </div>
             <ul>
                     <li><a href="index.html">Home</a></li>
@@ -276,5 +277,52 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        //changing courses
+        const icons = document.querySelectorAll(".icons")
+        const links = document.querySelectorAll(".side-nav ul li a")
+
+        for (let icon of icons){
+            icon.addEventListener("click", (e) =>{
+                changeCourse(e)
+            })
+        }
+        function changeCourse(e){
+                const openedCourse = document.querySelector(".opened")
+                const selectedIcon =document.querySelector(".selected")
+                openedCourse.classList.remove("opened")
+                selectedIcon.classList.remove("selected")
+                e.target.classList.add("selected")
+                const courseNumber = e.target.getAttribute("data-course")
+                const relatedCourse = document.querySelector(`.course[data-course= "${courseNumber}"] `)
+                relatedCourse.classList.add("opened")
+
+                if( relatedCourse.classList.contains("dark") ){
+                    links.forEach((link) =>{
+                        link.style.color = "white"
+                    }) 
+                }  else {
+                    links.forEach((link) =>{
+                        link.style.color = "#333333"
+                    }) 
+                }  
+        }
+        //checkmate
+        const chessItems = document.querySelectorAll(".chess-item")
+        const chessClock = document.querySelector(".chess-clock")
+        let startingPoint = 0
+
+        function startChess(){
+            setInterval( displayItems, 1000)
+        }
+        function displayItems(){
+            if( startingPoint < chessItems.length ){
+                chessItems[startingPoint++].style.opacity = 1
+            }    
+        }
+        
+        chessClock.onclick = startChess
+    </script>
+
 </body>
 </html>
