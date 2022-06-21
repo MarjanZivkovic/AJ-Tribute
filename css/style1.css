@@ -18,14 +18,9 @@
     padding: 1rem;
     color: #333;
     background-color: #fff;
-    border-bottom: 1px solid #666;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 .about-nav{
-    padding: 0.2rem;
-}
-.about-nav ul li a:hover{
-    color: #3498db;
+    padding: 0;
 }
 /*main podcast*/
 .podcast-main{
@@ -979,8 +974,13 @@
     font-size: 2em;
     margin: 2rem 0;
 }
+.ee-item a{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 .ee-item a:hover{
     text-decoration: underline;
+    font-weight: bold;
 }
 .ee-blog{
     color: #fff;
@@ -1190,6 +1190,13 @@
 }
 .buy-book ul li{
     padding: 1em;
+}
+.buy-book ul li a{
+    padding: 1em;
+}
+.buy-book ul li a:hover{
+    background-color: #647484;
+    color: #fff;
 }
 .buy-book ul li:first-of-type{
     color: #647484;
@@ -1569,7 +1576,7 @@
     #movieclubcontainer{
         height: 140vh;
     }
-    #jerry .book-right ul, #matrix .book-right ul, #jerry .book-right h4, #matrix .book-right h4{
+    #jerry .book-right ul, #matrix .book-right ul, #jerry .book-right p, #matrix .book-right p{
         display: none;
     }
     #jerry .book-left, #matrix .book-left, #jerry .book-right, #matrix .book-right{

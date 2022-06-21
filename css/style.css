@@ -235,11 +235,10 @@ blockquote{
     color: #fff;
 }
 .box-item{
-    transition: transform .3s ease-in-out;
     padding: 1.5em 1em;
 }
 .box-item:hover{
-    transform: scale(1.3);
+    border: 5px dashed #fff;
 }
 .cousres-title{
     margin: 2em 0;
@@ -706,27 +705,24 @@ blockquote{
 #hamburger{
     background-color: transparent;
     border: 0;
-    padding: 0.8em;
+    border-radius: 5px;
+    padding: 1rem;
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 #hamburger:hover{
-    background-color: #fff;
-    color: #333;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 .side-nav ul li a{
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 20px 5px 10px;
     color: #333;
+    font-weight: bold;
     line-height: 1.7em;
+    border-radius: 5px;
 }
-.side-nav ul li a:hover{
-    background-color: #e6e6e6;
-    color: #333;
-}
-.side-nav ul li a:focus{
-    background-color: #e6e6e6;
-    color: #333;
+.side-nav ul li a:hover, .side-nav ul li a:active{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 .divider{
     height: 15px;
@@ -744,12 +740,13 @@ blockquote{
 }
 .horizontal li a{
     display: inline-block;
-    padding: 10px;
+    padding: 0.5rem 1.2rem;
     font-weight: bold;
 }
 .horizontal li a:hover{
     background-color: #fff;
     color: #333;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 
 /*courses*/
@@ -882,12 +879,27 @@ blockquote{
     padding-bottom: 2em;
 }
 #chess-board h2{
-    margin: 3em 0;
+    margin: 2em 0;
     text-align: center;
 }
-#chess-board p{
+.chess-item{
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
+    opacity: 0;
+}
+.chess-clock{
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+    padding: 0.2rem 1rem;
+    transform: translateY(-2.5rem);
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.chess-clock:hover, .chess-clock:active{
+    border: 2px solid #333;
 }
 /* code */
 .dot-body{
@@ -1084,7 +1096,6 @@ blockquote{
     /*hamburger menu ALL PAGES*/
     .exposed{
         display: none;
-        background-color: rgba(255, 255, 255, 0.8);
     }
     .hidden{
         display: block;
@@ -1095,23 +1106,26 @@ blockquote{
     .divider{
         display: none;
     }
-    .horizontal-nav{
+    .side-nav ul,.horizontal-nav ul,.podcast-nav ul, .side-nav ul, .about-nav ul, .ee-nav ul{
+        width: 100vw;
+        height: 100vh;
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
         color: #333;
-    }
-    .about-nav, .podcast-nav, .ee-nav, #fun-nav{
-        max-width: max-content;
-    }
-    .podcast-nav ul li a, .side-nav ul li a, .about-nav ul li a, .ee-nav ul li a{
         font-weight: bold;
-        line-height: 1.1em;
-        padding: 5px 4em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .podcast-nav ul li, .horizontal-nav ul li,.side-nav ul li, .about-nav ul li, .ee-nav ul li {
+        height: calc( (100vh - 3rem ) / 11);
+        padding: 1rem;
     }
     #fun-nav{
         background-color: rgba(255, 255, 255, 0.8);
     }
-    #hamburger.fan-burger{
-        background-color: #5cdb95
+    #fun-nav #hamburger{
+        background-color: #5cdb95;
+        border-radius: 0;
     }
 }
 
